@@ -1,12 +1,12 @@
 apply plugin: 'android-library'
 
 dependencies {
-  compile 'com.android.support:support-v4:18.0.+'
+  compile 'com.android.support:support-v4:22.2.+'
 }
 
 android {
-  compileSdkVersion 14
-  buildToolsVersion '17.0.0'
+  compileSdkVersion 17
+  buildToolsVersion '25.0.0'
 
   sourceSets {
     main {
@@ -14,5 +14,9 @@ android {
       java.srcDirs = ['src']
       res.srcDirs = ['res']
     }
+  }
+  lintOptions {
+    abortOnError false
+    disable 'MissingTranslation'
   }
 }
